@@ -1,8 +1,0 @@
-model_checkpoint_path: "dqn_weights.h5f"
-all_model_checkpoint_paths: "dqn_weights.h5f"
- ^I think I didn't need this
- 
- 
- Instalation of tensorflow using apple instructions is working and GPU acceleration is working too
- 
- Keras-rl2 instalation by downloading git and installing manually
