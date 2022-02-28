@@ -1,5 +1,9 @@
-\documentclass[12pt, letterpaper]{article}
-\usepackage[utf8]{inputenc}
+\documentclass[12pt, a4paper]{article}
+\usepackage{lipsum}  
+\usepackage{url}
+\usepackage{hyperref} 
+\usepackage{float}
+
 \pagenumbering{arabic}
 \title{Bipedal Walking - Reinforcement Learning}
 \author{Roberto Figueiredo}
@@ -10,18 +14,20 @@
     \maketitle 
 \end{titlepage}
 
-\tableofcontents
+\include{MainContent/abstract}
+\include{MainContent/acknowledgements}
+
 
 \pagebreak
-    
-\section{Introduction}
+\tableofcontents
+\pagebreak
 
-This is the second section
-     
-\section{Text}
-This is my first citation \cite{femto_anup}.. that a and b ...
+
+\include{MainContent/Introduction.tex}
+\cite{relu}
 
 
 \bibliographystyle{plain}
 \bibliography{reference}
 \end{document}
+
