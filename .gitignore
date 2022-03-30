@@ -17,3 +17,7 @@ gym
 *.log
 *.synctex.gz
 *.toc
+~$*
+final-project-key.json
+*.out
+*.mov

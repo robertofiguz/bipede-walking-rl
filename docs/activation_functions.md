@@ -70,19 +70,24 @@ Loss is the penalty for a bad prediction. A machine learning algorithm builds a 
 - box2d no reset state if need to go back
 - Back propagation
 - on and off policy
-- Decision to abandon Keras? favoring more controll, avoiding unecessary, possibly unmaintained libraries
+- Decision to abandon Keras-rl? favoring more controll, avoiding unecessary, possibly unmaintained libraries
 - https://github.com/pybox2d/pybox2d/wiki/manual - docs on box2d
 - Target Network
       [^This Docs](https://towardsdatascience.com/deep-q-network-dqn-ii-b6bf911b6b2c) 
 - To fix the problem of multiple actions i need to understand the continuous actions space, actor critic method
 - Conv vs fully connected (Dense)
 - [multiple action RL](https://arxiv.org/pdf/1711.08946.pdf)
-- optimizer such as Adam
+- optimizer such as Adam ?!
+- how to detect a fall? / fail for the done state
+- calculate how straight the body is to increment reward and obtain a better targeted reward
+- problems with continuous increase of reward:
+  - robot will go back and forth to win more reward. suggestion: give 1 point if moved forward or even increasing reward. give negative reward if moves back to avoid this behaviour.
 # Decisions
-  changed from mujoco as it would require a 
-
+  changed from mujoco as it would require a new control system
 # Problems found along the way:
 - How to output multiple actions. On a robot need to controll multiple motors
+- Reward system and combination of other hyperparameters (possibly gamma)led to learning to stand [wandb logs](https://wandb.ai/sudofork/walker-v2/runs/1zhv4wxe?workspace=user-sudofork)
+  wasn't using an activation function on the output layers until V10(on wandb)
 
 # References
 [ReLU](https://www.kaggle.com/dansbecker/rectified-linear-units-relu-in-deep-learning)
@@ -113,3 +118,12 @@ Loss is the penalty for a bad prediction. A machine learning algorithm builds a 
 [Might cover multiple motor problem](https://arxiv.org/pdf/1701.08878.pdf)
 
 [robot RL control](https://github.com/normandipalo/intelligent-control-techniques-for-robots/blob/master/report.pdf)
+
+
+
+# write about
+
+write about how i setup all the log and all the code logging
+
+write about how i made it so everything can be reproduced
+

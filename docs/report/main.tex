@@ -1,17 +1,21 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt, a4paper]{report}
 \usepackage{lipsum}  
 \usepackage{url}
 \usepackage{hyperref} 
 \usepackage{float}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
 
 \pagenumbering{arabic}
 \title{Bipedal Walking - Reinforcement Learning}
 \author{Roberto Figueiredo}
 \date{April 2022}
 
+
 \begin{document}
 \begin{titlepage}
     \maketitle 
+    \thispagestyle{empty}
 \end{titlepage}
 
 \include{MainContent/abstract}
@@ -22,11 +26,35 @@
 \tableofcontents
 \pagebreak
 
+\chapter{Introduction}
+In this chapter the target problem will firstly be introduced, as will a proposed solution to solve it. To understand the problem, 
+background information will be covered to better understand the problem and what it is meant to target.
+% can I extend this?
 
 \include{MainContent/Introduction.tex}
-\cite{relu}
 
+\chapter{Background Research}
 
+    \include{MainContent/learning_algorithms.tex}
+
+\chapter{Development Structure}
+Due to the complexity of the project a development structure has been put in place, 
+this includes multiple steps of increasing complexity and realism, 
+as the increasing complexity allowed for detecting problems at an earlier, simpler stage making the transition easier.
+    \include{MainContent/structure.tex}
+    \include{MainContent/environment_definition.tex}
+
+\chapter{Results}
+    \include{MainContent/results.tex}
+
+\chapter{Future Research}
+    \include{MainContent/future_research.tex}
+
+\chapter{Project Evaluation}
+    \include{MainContent/evaluation.tex}
+
+\chapter{Conclusion}
+    \include{MainContent/conclusion.tex}
 \bibliographystyle{plain}
 \bibliography{reference}
 \end{document}
