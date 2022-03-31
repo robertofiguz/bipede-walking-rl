@@ -1,23 +1,56 @@
-\section{Robocup}
-Robocup is 
-\cite{robocup}
-\section{Humanoid Soccer League}
+\chapter{Introduction}
+In this chapter the target problem will firstly be introduced, as will a proposed solution to solve it. To understand the problem, 
+background information will be covered to better understand the problem and what it is meant to target.
 
-\section{Introduction to the Problem}
+    \section{Robocup}
+    Robocup is an attempt to advance the field of robotics by providing a common problem and an environment for sharing knowledge and collaborate.
+    The first Robocup took place in 1997 in Nagoya, Japan. The Objective of Robocup is to achieve fully autonomous soccer playing robots that are able to defeat the FIFA World Cup champions by 2050. 
 
+    Robocup has since evolved from just soccer and now includes multiple fields, Rescue, Soccer, @Home, Industrial and Junior.
+    \cite{robocup}
 
-\section{Proposed Solution}
+    % TODO: explain how robocup changes rules every x years and that is used to improve the robots and increase how realistic it is.
+    \section{Soccer League}
+    Robocup Soccer is split into multiple leagues, each with different challenges and focuses. The Small Size league uses small wheeled robots, 
+    each team is composed of six robots and play using a orange golf ball while tracked by a top-view camera;
+    This enables the robots to abstract from challenges such as complex vision detection, 
+    walking and others, enabling the teams to focus on strategy and multi-robot/agent cooperation and 
+    control in a highly dynamic environment with a hybrid centralized/distributed system. 
 
+    Middle size League assimilates to small size league, but in this case, the robots are of a larger size and must have all sensors on board; 
+    The main focus of the league is on mechatronics design, control and multi-agent cooperation at plan and perception levels.
 
+    Robocup also has simulation for most of its leagues, allowing the teams to focus on software and avoid the problems originated by using real robots hardware.
 
+    The Standard Platform is a step-up from the simulation league as while it uses real robots, NAOs, it allows the teams to focus mainly on software while using real robots and the challenges of using real robots without having to develop custom hardware. Each robot is fully autonomous and takes its one decisions.
 
+    The Humanoid league, assimilates the most to humans, using robots assimilating its shape and unlike humanoid robots outside the Humanoid League, the task of perception and world modeling is not simplified by using non-human like range sensors, making this, the most transversal league, requiring hardware and software development. 
+    In addition to soccer competitions technical challenges take place. 
+    Dynamic walking, running, and kicking the ball while maintaining balance, visual perception of the ball, other players, and the field, self-localization, and team play are among the many research issues investigated in the Humanoid League.
+    % TODO: add links to pages and explain difference between humanoid sizes 
 
-Robotic locomotion has, until a few years ago, been focused on wheel-based movement. 
-Although it is very stable and easy to implement, it lacks flexibility, the ability to move on uneven, unpredictable terrain and overcome obstacles such as stairs.
+    \section{Bold Hearts}
+    %TODO: talk about bold hearts and the structure
 
-As a RoboCup team Bold Hearts member, which competes in the humanoid soccer league, our robots must walk, a recurring problem due to rule changes. 
-As the objective of RoboCup is to achieve a realistic environment, competition rules change regularly. 
-Changes in rules involve field changes, such as moving from flat ground to synthetic grass, enforcing that teams develop walking algorithms that can adapt to more variable environments. 
-Rule changes also affect the robots, including their height, types of sensors and others. 
-Changes in the robot's structure lead to the need to readapt the walking algorithms as they are dependent on these variables. 
-These changes are time-consuming, and walking algorithms are a complex task requiring much effort from the team.
+    \section{Introduction to the Project}
+
+        \subsection{Problem}
+        Robotic locomotion has, until a few years ago, been focused on wheel-based movement. Although it is very stable and easy to implement, it lacks flexibility, the ability to move on uneven, unpredictable terrain and overcome obstacles such as stairs.
+
+        As a member of the Bold Hearts team, which competes in the Teen size league, a branch of the Humanoid League, robots must walk and, in addition to the high complexity of the challenges imposed by the humanoid leagues, Robocup rules periodically change, these changes are put in place as the Robocup objective is to achieve the most realistic environment. Rule changes affect both robots, changing the required height, sensors and others, as well as affecting the environment such as moving from flat ground to synthetic grass.
+
+        One of the main challenges faced by the team is walking, which is one of the most complex movements performed by humans, requiring simultaneous control of multiple joints to move while maintaining balance. 
+        This is one of the most energy and time-consuming problems faced by the team additionally, the rules changes and continuous improvements require updates to the robot's structural architecture, leading to new updates to the walking algorithm.
+
+        \subsection{Proposed Solution}
+
+        Walking algorithms can be developed using various techniques, 
+        including explicit programming, supervised learning and unsupervised learning. 
+        Walking is very complex as there are a lot of variables involved in it, such as the ground contact, 
+        maintaining balance and the complex gait movement. The two main aspects important to highlight are that the walking algorithm requires changes when both the robot or external factors change and that it requires manual work from the team to achieve this. %TODO:probably double check how this are adapted
+
+        The best way to solve the first mentioned problem requires having a robot and environment agnostic approach, this is possible by using Reinforcement Learning as the principles of the movement maintains therefore it should be possible to develop an agnostic reward function.
+        From the moment a reinforcement learning solution is successfully implemented, the team should be able to use the same implementation to retrain the policy using the updated robot/environment that has been modeled in the simulator.
+        This also allows to reduce the complexity of the problem as the input into the system is sensory data and the output is a set of actions to execute on the joints.
+
+        \subsection{Aims and Objectives}

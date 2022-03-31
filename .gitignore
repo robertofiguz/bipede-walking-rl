@@ -21,3 +21,6 @@ gym
 final-project-key.json
 *.out
 *.mov
+__latexindent*
+_latexindent*
+
