@@ -2,16 +2,16 @@
 In this chapter the target problem will firstly be introduced, as will a proposed solution to solve it. To understand the problem, 
 background information will be covered to better understand the problem and what it is meant to target.
 
-    \section{Robocup}
-    Robocup is an attempt to advance the field of robotics by providing a common problem and an environment for sharing knowledge and collaborate.
-    The first Robocup took place in 1997 in Nagoya, Japan. The Objective of Robocup is to achieve fully autonomous soccer playing robots that are able to defeat the FIFA World Cup champions by 2050. 
+    \section{RoboCup}
+    RoboCup is an attempt to advance the field of robotics by providing a common problem and an environment for sharing knowledge and collaborate.
+    The first RoboCup took place in 1997 in Nagoya, Japan. The Objective of RoboCup is to achieve fully autonomous soccer playing robots that are able to defeat the FIFA World Cup champions by 2050. 
 
-    Robocup has since evolved from just soccer and now includes multiple fields, Rescue, Soccer, @Home, Industrial and Junior.
-    \cite{robocup}
+    RoboCup has since evolved from just soccer and now includes multiple fields, Rescue, Soccer, @Home, Industrial and Junior.
+    \cite{RoboCup}
 
-    % TODO: explain how robocup changes rules every x years and that is used to improve the robots and increase how realistic it is.
+    % TODO: explain how RoboCup changes rules every x years and that is used to improve the robots and increase how realistic it is.
     \section{Soccer League}
-    Robocup Soccer is split into multiple leagues, each with different challenges and focuses. The Small Size league uses small wheeled robots, 
+    RoboCup Soccer is split into multiple leagues, each with different challenges and focuses. The Small Size league uses small wheeled robots, 
     each team is composed of six robots and play using a orange golf ball while tracked by a top-view camera;
     This enables the robots to abstract from challenges such as complex vision detection, 
     walking and others, enabling the teams to focus on strategy and multi-robot/agent cooperation and 
@@ -20,7 +20,7 @@ background information will be covered to better understand the problem and what
     Middle size League assimilates to small size league, but in this case, the robots are of a larger size and must have all sensors on board; 
     The main focus of the league is on mechatronics design, control and multi-agent cooperation at plan and perception levels.
 
-    Robocup also has simulation for most of its leagues, allowing the teams to focus on software and avoid the problems originated by using real robots hardware.
+    RoboCup also has simulation for most of its leagues, allowing the teams to focus on software and avoid the problems originated by using real robots hardware.
 
     The Standard Platform is a step-up from the simulation league as while it uses real robots, NAOs, it allows the teams to focus mainly on software while using real robots and the challenges of using real robots without having to develop custom hardware. Each robot is fully autonomous and takes its one decisions.
 
@@ -37,7 +37,7 @@ background information will be covered to better understand the problem and what
         \subsection{Problem}
         Robotic locomotion has, until a few years ago, been focused on wheel-based movement. Although it is very stable and easy to implement, it lacks flexibility, the ability to move on uneven, unpredictable terrain and overcome obstacles such as stairs.
 
-        As a member of the Bold Hearts team, which competes in the Teen size league, a branch of the Humanoid League, robots must walk and, in addition to the high complexity of the challenges imposed by the humanoid leagues, Robocup rules periodically change, these changes are put in place as the Robocup objective is to achieve the most realistic environment. Rule changes affect both robots, changing the required height, sensors and others, as well as affecting the environment such as moving from flat ground to synthetic grass.
+        As a member of the Bold Hearts team, which competes in the Teen size league, a branch of the Humanoid League, robots must walk and, in addition to the high complexity of the challenges imposed by the humanoid leagues, RoboCup rules periodically change, these changes are put in place as the RoboCup objective is to achieve the most realistic environment. Rule changes affect both robots, changing the required height, sensors and others, as well as affecting the environment such as moving from flat ground to synthetic grass.
 
         One of the main challenges faced by the team is walking, which is one of the most complex movements performed by humans, requiring simultaneous control of multiple joints to move while maintaining balance. 
         This is one of the most energy and time-consuming problems faced by the team additionally, the rules changes and continuous improvements require updates to the robot's structural architecture, leading to new updates to the walking algorithm.
@@ -54,3 +54,10 @@ background information will be covered to better understand the problem and what
         This also allows to reduce the complexity of the problem as the input into the system is sensory data and the output is a set of actions to execute on the joints.
 
         \subsection{Aims and Objectives}
+        This project proposes to develop a reinforcement learning implementation for walking, 
+        to achieve the objectives of the project, three main topics will be covered, 
+        robotics biped locomotion, reinforcement learning algorithms and the training framework.
+
+        While achieving a working walking pattern would be desireable, the project aims to develop an implementation of reinforcement learning to achieve walking, 
+        along with it aims to develop resourcefull documentation on the process and its results, allowing for reproducibility and further development and 
+        adaptations of the current implementation to learn not only walking but any suitable problem.

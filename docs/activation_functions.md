@@ -58,6 +58,29 @@ Loss is the penalty for a bad prediction. A machine learning algorithm builds a 
         - ![](https://spinningup.openai.com/en/latest/_images/math/d353412962e458573b92aac78df3fbe0a10d998d.svg)
     - **Trade-offs Between Policy Optimization and Q-Learning**: The primary strength of policy optimization methods is that they are principled, in the sense that you directly optimize for the thing you want. This tends to make them stable and reliable. By contrast, Q-learning methods only indirectly optimize for agent performance, by training ![](https://spinningup.openai.com/en/latest/_images/math/713b5ea31ad66705079ea5786dd84e06944402b7.svg) to satisfy a self-consistency equation. There are many failure modes for this kind of learning, so it tends to be less stable. But, Q-learning methods gain the advantage of being substantially more sample efficient when they do work, because they can reuse data more effectively than policy optimization techniques.
 
+# Markov decision process
+  Markov Decision Process is Markov Reward Process with a decisions. Everything is same like MRP but now we have actual agent that makes decisions or take actions.
+  It is a tuple of (S, A, P, R, 𝛾) where:
+
+  S is a set of states, <br>
+  A is the set of actions agent can choose to take,<br>
+  P is the transition Probability Matrix,<br>
+  R is the Reward accumulated by the actions of the agent,<br>
+  𝛾 is the discount factor.
+
+  ## Markov Reward Process 
+  As the name suggests, MDPs are the Markov chains with values judgement.Basically, we get a value from every state our agent is in.<br>
+  Rs = E[R+1 | S]
+
+  ## Markov Property
+  ![](https://miro.medium.com/max/990/1*Tr7GE76SiHh8_jVSYl2mug.png)
+
+  This means that the transistion to state t+1  from state t is independent of the past, meaning that our current state already captures the information of the past states.
+
+  ## **Markov chains**
+  A Markov chain is a mathematical system that experiences transitions from one state to another according to certain probabilistic rules. The defining characteristic of a Markov chain is that no matter how the process arrived at its present state, the possible future states are fixed. In other words, the probability of transitioning to any particular state is dependent solely on the current state and time elapsed
+
+  
 # Experience Replay
   - The basic idea behind experience replay is to storing past experiences and then using a random subset of these experiences to update the Q-network, rather than using just the single most recent experience. This are used in order to avoid harmfull correlations.
 
@@ -127,3 +150,12 @@ write about how i setup all the log and all the code logging
 
 write about how i made it so everything can be reproduced
 
+# ADE INTERNET ACCESS 
+  ## used to install dependenies of openai_ros2
+
+pkill docker
+iptables -t nat -F
+ifconfig docker0 down
+brctl delbr docker0
+docker -d
+sudo systemctl restart docker

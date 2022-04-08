@@ -1,9 +1,17 @@
 \documentclass[12pt, a4paper]{report}
+\usepackage{svg}
 \usepackage{lipsum}  
 \usepackage{url}
 \usepackage{hyperref} 
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usetikzlibrary {positioning} 
+\usetikzlibrary{arrows.meta, quotes}
+
 \graphicspath{{figures/}}
 
 \pagenumbering{arabic}
@@ -31,8 +39,7 @@
 \include{MainContent/Introduction.tex}
 
 \chapter{Background Research}
-
-    \include{MainContent/learning_algorithms.tex}
+    \include{MainContent/background_research.tex}
 
 \chapter{Development Structure}
     Due to the complexity of the project, a development structure has been put in place, 
@@ -42,7 +49,8 @@
     \include{MainContent/structure.tex}
     \include{MainContent/environment_definition.tex}
 
-\chapter{Results}
+\chapter{Experiments} % changed from results to experiments to be more vague and that i can explore more the process and decisions
+This chapter will cover the development process, the decisions that have been taken as well as the results and outcomes of the individual development parts. %find a better word for parts
     \include{MainContent/results.tex}
 
 \chapter{Future Research}
@@ -57,7 +65,7 @@
 
 
 
-    
+
 
 \bibliographystyle{plain}
 \bibliography{reference}
