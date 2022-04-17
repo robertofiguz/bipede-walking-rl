@@ -1,15 +1,14 @@
 \chapter{Introduction}
-In this chapter the target problem will firstly be introduced, as will a proposed solution to solve it. To understand the problem, 
-background information will be covered to better understand the problem and what it is meant to target.
+In this chapter the targeted problem, along with the proposed solution will be introduced. To better understand the explored problem, 
+key relevant background concepts will be introduced.
 
     \section{RoboCup}
     RoboCup is an attempt to advance the field of robotics by providing a common problem and an environment for sharing knowledge and collaborate.
-    The first RoboCup took place in 1997 in Nagoya, Japan. The Objective of RoboCup is to achieve fully autonomous soccer playing robots that are able to defeat the FIFA World Cup champions by 2050. 
+    The Objective of RoboCup is to achieve fully autonomous soccer playing robots that are able to defeat the FIFA World Cup champions by 2050. 
 
     RoboCup has since evolved from just soccer and now includes multiple fields, Rescue, Soccer, @Home, Industrial and Junior.
     \cite{RoboCup}
 
-    % TODO: explain how RoboCup changes rules every x years and that is used to improve the robots and increase how realistic it is.
     \section{Soccer League}
     RoboCup Soccer is split into multiple leagues, each with different challenges and focuses. The Small Size league uses small wheeled robots, 
     each team is composed of six robots and play using a orange golf ball while tracked by a top-view camera;
@@ -20,27 +19,37 @@ background information will be covered to better understand the problem and what
     Middle size League assimilates to small size league, but in this case, the robots are of a larger size and must have all sensors on board; 
     The main focus of the league is on mechatronics design, control and multi-agent cooperation at plan and perception levels.
 
-    RoboCup also has simulation for most of its leagues, allowing the teams to focus on software and avoid the problems originated by using real robots hardware.
+    RoboCup also has simulation for most of its leagues, allowing the teams to focus on software and avoid the difficulties originated by using real robots hardware.
 
     The Standard Platform is a step-up from the simulation league as while it uses real robots, NAOs, it allows the teams to focus mainly on software while using real robots and the challenges of using real robots without having to develop custom hardware. Each robot is fully autonomous and takes its one decisions.
 
-    The Humanoid league, assimilates the most to humans, using robots assimilating its shape and unlike humanoid robots outside the Humanoid League, the task of perception and world modeling is not simplified by using non-human like range sensors, making this, the most transversal league, requiring hardware and software development. 
+    The Humanoid league, assimilates the most to humans, using robots assimilating its shape and unlike robots outside the Humanoid League, the task of perception and world modeling is not simplified by using non-human like range sensors, making this, the most transversal league, requiring hardware and software development. 
     In addition to soccer competitions technical challenges take place. 
     Dynamic walking, running, and kicking the ball while maintaining balance, visual perception of the ball, other players, and the field, self-localization, and team play are among the many research issues investigated in the Humanoid League.
     % TODO: add links to pages and explain difference between humanoid sizes 
 
     \section{Bold Hearts}
-    %TODO: talk about bold hearts and the structure
+    The Bold Hearts are the RoboCup team from the University of Hertfordshire. The team researches and develops software and hardware in the Humanoid league, specifically in the teen size league.
+    The robots used by the team are based on the Darwin-OP but incrementally developed using custom 3D printed parts and a new computing unit, Odroid-XU4 and camera, the Logitech C920 Pro. 
+    The Robots use ROS2 as an operating system.
+    \cite{boldhearts}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.26]{figures/boldbot_2.png}
+        \caption{Boldbot}
+    \end{figure}
 
     \section{Introduction to the Project}
 
         \subsection{Problem}
         Robotic locomotion has, until a few years ago, been focused on wheel-based movement. Although it is very stable and easy to implement, it lacks flexibility, the ability to move on uneven, unpredictable terrain and overcome obstacles such as stairs.
 
-        As a member of the Bold Hearts team, which competes in the Teen size league, a branch of the Humanoid League, robots must walk and, in addition to the high complexity of the challenges imposed by the humanoid leagues, RoboCup rules periodically change, these changes are put in place as the RoboCup objective is to achieve the most realistic environment. Rule changes affect both robots, changing the required height, sensors and others, as well as affecting the environment such as moving from flat ground to synthetic grass.
+        As a member of the Bold Hearts team our robots must be able to walk and, in addition to the high complexity of this challenges, 
+        RoboCup rules periodically change, these changes are put in place as the RoboCup objective is to achieve the most realistic environment. 
+        Rule changes affect both robots, changing the required height, sensors and others, as well as affecting the environment such as moving from flat ground to synthetic grass.
 
         One of the main challenges faced by the team is walking, which is one of the most complex movements performed by humans, requiring simultaneous control of multiple joints to move while maintaining balance. 
-        This is one of the most energy and time-consuming problems faced by the team additionally, the rules changes and continuous improvements require updates to the robot's structural architecture, leading to new updates to the walking algorithm.
+        This is one of the most energy and time-consuming problems faced by the team agravated by the rules changes and continuous improvements this requires updates to the robot's structural architecture, leading to new updates to the walking algorithm.
 
         \subsection{Proposed Solution}
 

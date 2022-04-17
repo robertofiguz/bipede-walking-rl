@@ -112,6 +112,14 @@ Loss is the penalty for a bad prediction. A machine learning algorithm builds a 
 - Reward system and combination of other hyperparameters (possibly gamma)led to learning to stand [wandb logs](https://wandb.ai/sudofork/walker-v2/runs/1zhv4wxe?workspace=user-sudofork)
   wasn't using an activation function on the output layers until V10(on wandb)
 
+
+# BoltzmannQPolicy
+
+In the exploration, we would like to exploit all the information present in the estimated Q values produced by our network. The Boltzmann exploration does this. Instead of always taking a random or optimal action, this approach involves choosing an action with weighted probabilities. To accomplish this, it uses a softmax over the networks estimates of value for each action. In this case, the action that the agent estimates to be the optimal one is most likely (but not guaranteed) to be chosen. The biggest advantage over the e-greedy algorithm is that information about the likely value of the other actions can also be taken into consideration. If there are four actions available to an agent, in e-greedy the three actions estimated ...
+# Good set of explanation for exploration approaches:
+[Link to exploration approaches](https://github.com/keras-rl/keras-rl/blob/master/rl/policy.py)
+
+
 # References
 [ReLU](https://www.kaggle.com/dansbecker/rectified-linear-units-relu-in-deep-learning)
 
@@ -159,3 +167,9 @@ ifconfig docker0 down
 brctl delbr docker0
 docker -d
 sudo systemctl restart docker
+
+
+
+# decisions on 2d Walker
+
+added a plit into the memory to remove the old experiences

@@ -9,6 +9,12 @@
 \usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{listings}
 \usetikzlibrary {positioning} 
 \usetikzlibrary{arrows.meta, quotes}
 
@@ -41,15 +47,15 @@
 \chapter{Background Research}
     \include{MainContent/background_research.tex}
 
-\chapter{Development Structure}
-    Due to the complexity of the project, a development structure has been put in place, 
-    this includes multiple steps of increasing complexity and realism, 
-    the increasing complexity allowed for detecting problems at an earlier, simpler stage, making the transition easier.
+\chapter{Design}
+\include{MainContent/design.tex}
 
-    \include{MainContent/structure.tex}
-    \include{MainContent/environment_definition.tex}
-
-\chapter{Experiments} % changed from results to experiments to be more vague and that i can explore more the process and decisions
+\include{MainContent/structure.tex}
+\include{MainContent/environment_definition.tex}
+    
+\chapter{Implementation}
+    \include{MainContent/implementation.tex}
+\chapter{Experimental Results} % changed from results to experiments to be more vague and that i can explore more the process and decisions
 This chapter will cover the development process, the decisions that have been taken as well as the results and outcomes of the individual development parts. %find a better word for parts
     \include{MainContent/results.tex}
 
