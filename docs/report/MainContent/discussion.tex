@@ -1,0 +1,14 @@
+\chapter{Result Discussion}
+
+\section{CartPole Results Discussion}
+In the CartPole stage, two exploration strategies were tested, Boltzmann and Epsilon Greedy. The more popular Epsilon Greedy had the best results being able to converge to an optimal policy in half the number of steps compared to Boltzmann.
+
+The second experiment conducted in CartPole was to find the optimal hyperparameters. As could be seen in the Results section, the optimal parameters found were learning rate of 0.01 and epsilon of 0.1. The learning rate of 0.01 tends to be a starting point for testing hyperparameters in reinforcement learning and is often the optimal value. 
+The value for epsilon($\epsilon$) is the probability of choosing a random action. There needs to be a balance between exploration and exploitation. The experiment covered exploration rates starting at 10\% and tested both 20\% and 30\%, although 20\% exploration was only able to converge after 100000 steps, compared to 10\% which converged at 50000 steps. Any value tested over 20\% didn't converge in 100000 steps.
+
+\section{2D Walker Results Discussion}
+
+ Most of the experiments in this stage iterated over the reward function. After a lot of iterations using penalties (negative rewards) and shifting the rewards to use only positive rewards, the results became better as the walker stopped bending backwards.
+
+ Although, over the experiments realized, when testing the q-values and their variance depending on the inputs, for the learning rate of 0.01, the q-values were very close to each other and changed very little after about 400000 steps tested when testing with a learning rate of 0.1 the q-values converged fast although the results were suboptimal.
+ 

@@ -2344,6 +2344,23 @@
   <bcf:bibdata section="0">
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">RoboCup</bcf:citekey>
+    <bcf:citekey order="2">boldhearts</bcf:citekey>
+    <bcf:citekey order="3">reinforcement_learning</bcf:citekey>
+    <bcf:citekey order="4">openai_rl</bcf:citekey>
+    <bcf:citekey order="5">openai_rl</bcf:citekey>
+    <bcf:citekey order="6">atlas_rl</bcf:citekey>
+    <bcf:citekey order="7">cartpole</bcf:citekey>
+    <bcf:citekey order="8">ros-gym</bcf:citekey>
+    <bcf:citekey order="9">kerasrl2</bcf:citekey>
+    <bcf:citekey order="10">apple-tf</bcf:citekey>
+    <bcf:citekey order="11">wandb</bcf:citekey>
+    <bcf:citekey order="12">pymunk</bcf:citekey>
+    <bcf:citekey order="13">chipmunk</bcf:citekey>
+    <bcf:citekey order="14">pygame</bcf:citekey>
+    <bcf:citekey order="15">ros-gym</bcf:citekey>
+    <bcf:citekey order="16">openairos_2</bcf:citekey>
+    <bcf:citekey order="17">empowerment</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

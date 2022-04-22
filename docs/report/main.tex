@@ -8,13 +8,17 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{enumitem}
-\usepackage{indentfirst}
+
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{tabu}
 \usepackage{listings}
 \usepackage{tcolorbox}
 \usepackage{listings}
+
+\parindent=0pt
+\parskip=6pt plus 2pt minus 1pt
+
 \usetikzlibrary {positioning} 
 \usetikzlibrary{arrows.meta, quotes}
 
@@ -44,29 +48,23 @@
 
 \include{MainContent/Introduction.tex}
 
-\chapter{Background Research}
-    \include{MainContent/background_research.tex}
 
-\chapter{Design}
+\include{MainContent/background_research.tex}
+
+
 \include{MainContent/design.tex}
-
-\include{MainContent/structure.tex}
-\include{MainContent/environment_definition.tex}
     
-\chapter{Implementation}
-    \include{MainContent/implementation.tex}
-\chapter{Experimental Results} % changed from results to experiments to be more vague and that i can explore more the process and decisions
-This chapter will cover the development process, the decisions that have been taken as well as the results and outcomes of the individual development parts. %find a better word for parts
-    \include{MainContent/results.tex}
 
-\chapter{Future Research}
-    \include{MainContent/future_research.tex}
+\include{MainContent/implementation.tex}
 
-\chapter{Project Evaluation}
-    \include{MainContent/evaluation.tex}
+ % changed from results to experiments to be more vague and that i can explore more the process and decisions
+\include{MainContent/results.tex}
+\include{MainContent/discussion.tex}
+\include{MainContent/future_research.tex}
 
-\chapter{Conclusion}
-    \include{MainContent/conclusion.tex}
+\include{MainContent/evaluation.tex}
+
+\include{MainContent/conclusions.tex}
 
 
 

@@ -3,7 +3,17 @@
 
 %% Created for Roberto Figueiredo at 2022-03-30 19:54:35 +0100
 
- @misc{atlas_rl,
+ @misc{apple-tf,
+  title        = {Tensorflow Plugin - Metal},
+  url          = {https://developer.apple.com/metal/},
+  howpublished = {\url{https://developer.apple.com/metal/tensorflow-plugin}},
+  abstractnote = {Find presentations, documentation, sample code, and resources for building macOS, iOS, and tvOS apps with the Metal framework.},
+  journal      = {Apple Developer},
+  author       = {Inc, Apple},
+  language     = {en},
+  note         = {last visited: 2022-04-12}
+}
+@misc{atlas_rl,
   title        = {Deep Q-Learning for Humanoid Walking},
   abstractnote = {Existing methods to allow humanoid robots to walk suffer from a lack of adaptability to new and unexpected environments, due to their reliance on using only higher-level motion control with relatively fixed sub-motions, such as taking an individual step. These conventional methods require significant knowledge of controls and assumptions about the expected surroundings. Humans, however, manage to walk very efficiently and adapt to new environments well due to the learned behaviors. Our approach is to create a reinforcement learning framework that continuously chooses an action to perform, by utilizing a neural network to rate a set of joint values based on the current state of the robot. We successfully train the Boston Dynamics Atlas robot to learn how to walk with this framework.},
   publisher    = {Worcester Polytechnic Institute},
@@ -28,27 +38,46 @@
   howpublished  = {\url{https://github.com/openai/gym/blob/master/gym/envs/classic_control/cartpole.py}},
   keywords      = {cartpole, openai, gym},
   title         = {Cartpole},
-  year          = {2016}
+  year          = {2016},
+  note         = {last visited: 2022-04-22}
 }
-
-@misc{chipmunk,
+ @misc{chipmunk,
   author        = {Chipmunk},
   date-modified = {2022-03-09 20:54:46 +0000},
   howpublished  = {\url{http://chipmunk-physics.net}},
   keywords      = {2d, pymunk, physics},
-  title         = {Chipmunk}
-}
-%% Saved with string encoding Unicode (UTF-8) 
- @misc{apple-tf,
-  title        = {Tensorflow Plugin - Metal},
-  url          = {https://developer.apple.com/metal/},
-  howpublished = {\url{https://developer.apple.com/metal/tensorflow-plugin}},
-  abstractnote = {Find presentations, documentation, sample code, and resources for building macOS, iOS, and tvOS apps with the Metal framework.},
-  journal      = {Apple Developer},
-  author       = {Inc, Apple},
-  language     = {en}
+  title         = {Chipmunk},
+  note         = {last visited: 2020-03-10}
 }
 
+@misc{empowerment,
+  title        = {Empowerment driven Exploration},
+  url          = {http://navneet-nmk.github.io/2018-08-26-empowerment/},
+  abstractnote = {Empowerment as intrinsic reward},
+  author       = {Kumar, Navneet Madhu},
+  language     = {en},
+  note         = {last visited: 2022-04-18}
+}
+ 
+ @misc{gym,
+  author       = {OpenAI},
+  howpublished = {\url{https://gym.openai.com}},
+  title        = {Gym},
+  urldate      = {2022-04-16},
+  note         = {last visited: 2022-04-22}
+}
+
+
+
+ @misc{keras-rl,
+  author       = {Matthias Plappert},
+  title        = {keras-rl},
+  year         = {2016},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.cdn.hbchan.top/keras-rl/keras-rl}},
+  note         = {last visited: 2022-04-22}
+}
 
 
  @misc{kerasrl2,
@@ -58,11 +87,11 @@
   publisher    = {GitHub},
   journal      = {GitHub repository},
   howpublished = {\url{https://github.com/taylormcnally/keras-rl2}},
-  commit       = {06f51537f9066fa72a56c506b589eef4b07644d9}
+  commit       = {06f51537f9066fa72a56c506b589eef4b07644d9},
+  note         = {last visited: 2022-04-22}
 }
 
-
- @article{openai,
+@article{openai,
   title    = {{OpenAI} {Gym}},
   url      = {http://arxiv.org/abs/1606.01540},
   abstract = {OpenAI Gym is a toolkit for reinforcement learning research. It includes a growing collection of benchmark problems that expose a common interface, and a website where people can share their results and compare the performance of algorithms. This whitepaper discusses the components of OpenAI Gym and the design decisions that went into the software.},
@@ -76,35 +105,47 @@
   file     = {arXiv Fulltext PDF:/Users/roberto/Zotero/storage/NTAGYJR2/Brockman et al. - 2016 - OpenAI Gym.pdf:application/pdf;arXiv.org Snapshot:/Users/roberto/Zotero/storage/TK3L5PUD/1606.html:text/html}
 }
 
-@misc{keras-rl,
-    author = {Matthias Plappert},
-    title = {keras-rl},
-    year = {2016},
-    publisher = {GitHub},
-    journal = {GitHub repository},
-    howpublished = {\url{https://github.cdn.hbchan.top/keras-rl/keras-rl}},
-}
-
 @misc{openai_rl,
   title        = {INTRODUCTION TO RL},
   author       = {OpenAI},
   year         = {2018},
-  howpublished = {\url {https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html}}
+  howpublished = {\url {https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html}},
+  note         = {last visited: 2022-03-18}
 }
 
+@misc{openairos_2,
+  author       = {siw-engineering},
+  title        = {openai\_ros2},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{hhttps://github.com/siw-engineering/openai_ros2}},
+  commit       = {5083adb9a61cf91b61c6e2f83a921061413ff8be},
+  note         = {last visited: 2022-04-18}
+}
+
+@misc{parameterimportance,
+  title        = {WandB - Parameter Importance},
+  author       = {WandB},
+  urldate      = {2022-04-16},
+  howpublished = {\url{https://docs.wandb.ai/ref/app/features/panels/parameter-importance}},
+  note         = {last visited: 2022-04-22}
+}
 @misc{pygame,
   author        = {Pygame},
   date-modified = {2022-03-09 20:54:46 +0000},
   howpublished  = {\url{https://www.pygame.org}},
   keywords      = {2d, pymunk, physics},
-  title         = {Pygame}
+  title         = {Pygame},
+  note          = {last visited: 2022-03-30}
 }
+
 @misc{pymunk,
   author        = {Pymunk},
   date-modified = {2022-03-09 20:54:46 +0000},
   howpublished  = {\url{http://www.pymunk.org}},
   keywords      = {2d, pymunk, physics},
-  title         = {Pymunk}
+  title         = {Pymunk},
+  note          = {last visited: 2022-03-30}
 }
 
 @book{reinforcement_learning,
@@ -144,10 +185,13 @@
   howpublished  = {\url{http://wiki.ros.org/openai_ros}},
   keywords      = {ros, openai, gym},
   title         = {openai ros},
-  year          = {2016}
+  year          = {2016},
+  note          = {last visited: 2022-03-20}
 }
 
 @misc{wandb,
-  title = {Weights and Biases},
-  url   = {https://wandb.ai/site}
+  title        = {Weights and Biases},
+  author       = {WandB},
+  howpublished = {\url{https://wandb.ai/site}},
+  note         = {last visited: 2022-04-22}
 }
