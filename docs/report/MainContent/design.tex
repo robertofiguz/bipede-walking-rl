@@ -6,10 +6,10 @@ Due to the project's complexity, a development structure has been put in place. 
 \subsection{CartPole}
 CartPole is a classic exercise of reinforcement learning, it consists in balancing a pole in a cart moving on a horizontal plane by applying a force on the right or left side of the cart, making it move in the opposite direction. 
 
-The CartPole environment allows for implementing and testing the reinforcement learning algorithm, different implementations, and its comparison. At this stage, it was also used to implement the logging and reproducibility interface.
+The CartPole environment allows for implementing and testing the reinforcement learning algorithm, different implementations, and its comparison. At this stage, it is also used to implement the logging and reproducibility interface.
 
 \subsection{2D Walker}
-At this stage, the complexity of the environment increases as the environment starts to assimilate the target problem. Although, this stage eliminates some of the complexity, such as using a more complex 3D environment and implementing the training with the robot control interface.
+At this stage, the complexity of the environment increases as the environment starts to approximate the target problem. Although, this stage eliminates some of the complexity, such as using a more complex 3D environment and implementing the training with the robot control interface.
 This allows for the implementation of a neural network, a learning algorithm capable of handling multiple simultaneous outputs as it is required to control all the joints of the robot and understand how to calculate the best action efficiently.
 
 To achieve this, it is necessary to develop a custom 2D environment of a simplified humanoid in order to train a walking behaviour.
@@ -19,7 +19,7 @@ New challenges from this stage, such as implementing a custom reward system, ren
 The final stage of the project is the implementation of a 3D simulated robot. This is the combination of the previous stage with extra complexity, not only due to the inherited complexity of a higher dimensional world but because this should be able to integrate with the real robot from the Bold Hearts team and therefore use its control interface.
 Robot simulation is the primary platform for developing software for robotics; it has many benefits, developing software and testing it directly on a real robot can be a very slow process and can even break the robot.
 
-3d simulation brings new challenges, such as a larger range of motion and more joints to control, along with a more complex environment, requiring more processing power and more time to solve the problem. 
+3D simulation brings new challenges, such as a larger range of motion and more joints to control, along with a more complex environment, requiring more processing power and more time to solve the problem. 
 Along with this, it requires a more complex reward system as a new dimension poses new problems.
 
 \section{Environment Definition}

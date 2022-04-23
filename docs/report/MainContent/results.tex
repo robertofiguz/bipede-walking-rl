@@ -15,7 +15,6 @@ The implementation of Keras-rl is very easy and doesn't require a deep understan
 The second implementation tested was using the plain Keras API. While this provides more flexibility, it also requires a much deeper understanding of how reinforcement learning works.
 %%%%%%%%% INSERT DETAILS HERE %%%%%%%%%
 The implementation using the Keras API was essential to develop the necessary knowledge for the project and to progress to the next stage.
-\subsection*{}
 
 While an implementation using Keras-rl would be simpler and even possibly ease the iteration process, this implementation provides less flexibility and given the target of the project and 
 desire to develop a deeper understanding of reinforcement learning, the implementation using the Keras API was chosen to implement the next phases.
@@ -190,7 +189,7 @@ After 10000 episodes, we start to observe how the agent starts to learn to move 
 
 After many iterations over the reward system and hyperparameters, the reward system performs better when the range of reward is positive. After removing penalties and setting the rewards in the range [0,16], the agent showed more expectable results and was able to learn to reach targets in close range.
 
-One of the observations made during trained is how the agent rapidly learns to balance itself in the same position. This happens because in the short term, it's more favourable to stay still than to fall. This behaviour converges very fast, although, as learning to walk is a complex pattern, it would require long training sessions with potentially millions of episodes to update the neural network.
+One of the observations made during trained is how the agent rapidly learns to balance itself in the same position. This happens because in the short term, it's more favourable to stay still than to fall. This behaviour develops very fast, although, as learning to walk is a complex pattern, it would require long training sessions with potentially millions of episodes to update the neural network.
 
 When testing why the robot wasn't able to learn to walk, the q-values showed very little variation, independently of the input. The reason for this is that the learning rate, when set to 0.01, would require much lengthier training sessions. When applying the same testing to sessions with learning rates as high as 0.1, the q-values would converge very fast, but the agent wouldn't perform well.
 
@@ -198,19 +197,21 @@ Bellow are the comparison of selected runs to which were applied different hyper
 \begin{figure}[H]
  \centering
  \includegraphics[width=1\textwidth]{select_walker_graph.png}
- \caption{Comparison of multiple selected runs using different hyperparameters.}
+ \caption{Comparison of multiple selected runs using different hyperparameters. See table \ref*{table:graph_walker} for hyperparameters}
 \end{figure}
 
 From the graph above we can observe that two of the runs perform much better than the remaining, this is explained, confirming previous beliefs, by using an importance and correlation analysis:
 \begin{figure}[H]
  \centering
  \includegraphics[width=1\textwidth]{selected_walker_importance.png}
- \caption{Importance and correlation analysis of the selected runs.}
+ \caption{Importance and correlation analysis of the selected runs. See text for details.}
+\label{fig:importance}
 \end{figure}
 
 \begin{table}[H]
  \centering
  \caption{Hyperparameters used for the selected experiments explored in this chapter.}
+ \label{table:graph_walker}
  \begin{tabular}{|l|l|l|l|l|l|l|}
  \hline
  Hyperparameters & Run 1 & Run 2 & Run 3 & Run 4 & Run 5 & Run 6 \\ \hline
@@ -224,7 +225,7 @@ From the graph above we can observe that two of the runs perform much better tha
  \end{tabular}
  \end{table}
 
-The above graph is generated using WandB, it shows the linear \textbf{correlation} between the hyperparameter and the reward obtained, the red lines represent a negative value and the green lines represent positive values, therefore, when the hyperparameter has a higher value, the metric also has higher values and vice versa. Although, correlation alone isn't a very good metric as it does not capture second-hand interactions between parameters.\cite{parameterimportance}
+The graph \ref{fig:importance} is generated using WandB, it shows the linear \textbf{correlation} between the hyperparameter and the reward obtained, the red lines represent a negative value and the green lines represent positive values, therefore, when the hyperparameter has a higher value, the metric also has higher values and vice versa. Although, correlation alone isn't a very good metric as it does not capture second-hand interactions between parameters.\cite{parameterimportance}
 Therefore an importance metric is also calculated using a random forest with the hyperparameters as inputs and the metric as the target output and reports the feature importance values for the random forest.
 
 This analysis shows how the number of units in the neural network impacts the results, coming up as the most important hyperparameter in the testing. The second hyperparameter is batch-size, affecting how much data is fed into the network. Gamma and its high correlation with the episode reward is expected, as a higher gamma values more long-term rewards. The next two hyperparameters, epsilon and epsilon min(minimum), are related, $\epsilon$ is the initial value of exploration while epsilon min is the value of exploration at the end of the episode. The data shows that lower epsilons work better for the tests conducted, it was a common observation, not only in the selected runs, but also along the entire development process. 

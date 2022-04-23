@@ -1,5 +1,5 @@
 \chapter{Introduction}
- RoboCup is a worldwide competition introduced to bridge the gap between robotics and new advancements in AI technology. Each year thousands of RoboCupers get together to compete and share knowledge and advances in robotics. The Bold Hearts team competes in the RoboCup Soccer Humanoid League. In this Chapter, these topics will be introduced to understand the problem at study better.
+ RoboCup is a worldwide competition introduced to bridge the gap between robotics and new advancements in AI technology. Each year thousands of RoboCupers get together to compete and share knowledge and advances in robotics. The Bold Hearts team competes in the RoboCup Soccer Humanoid League, hence the relevance of the problem of  walking for bipedal robots. In this Chapter, these topics will be introduced to understand the problem at study better.
 
  \section{RoboCup}
  RoboCup is an attempt to advance the field of robotics by providing a common problem and an environment for sharing knowledge and collaboration.
@@ -22,7 +22,7 @@
 
  The Standard Platform is a step-up from the simulation league as while it uses real robots, NAOs, it allows the teams to focus mainly on software while using real robots and the challenges of using real robots without having to develop custom hardware. Each robot is fully autonomous and takes its own decisions.
 
- The Humanoid League assimilates the most to humans, using robots assimilating its shape. Unlike robots outside the Humanoid League, the task of perception and world modelling is not simplified by using non-human like range sensors, making this the most transversal league, requiring hardware and software development. 
+ The Humanoid League is the most similar to humans, using robots who mimics its shape. Unlike robots outside the Humanoid League, the task of perception and world modelling is not simplified by using non-human like range sensors, making this the most transversal league, requiring hardware and software development. 
  In addition to soccer competitions, technical challenges take place. 
  Dynamic walking, running and kicking the ball while maintaining balance, visual perception of the ball, other players and the field, self-localization, and team play are among the many research issues investigated in the Humanoid League.
  % TODO: add links to pages and explain the difference between humanoid sizes 
@@ -43,10 +43,10 @@
  \subsection{Problem, Walking for Humanoid robots}
  Until a few years ago, Robotic locomotion was focused on wheel-based movement. Although it is very stable and easy to implement, it lacks flexibility, the ability to move on uneven, unpredictable terrain and overcome obstacles such as stairs.
 
- The Bold Hearts teams robots must be able to walk and, in addition to the high complexity of these challenge, RoboCup rules periodically change. 
+ The Bold Hearts teams robots must be able to walk and, in addition to the high complexity of this challenge, RoboCup rules periodically change. 
  These changes are implemented as the RoboCup objective is to achieve the most realistic environment and affect both robots, changing the required height, sensors and others, as well as affecting the environment, 
  such as moving from flat ground to synthetic grass. Walking is one of the most complex movements performed by humans, requiring simultaneous control of multiple joints to move while maintaining balance. 
- Not only due to its natural complexity but also aggravated by the rules changes and continuous improvements leading to new updates to the walking algorithm, this is one of the team's most energy and time-consuming problems.
+ Not only due to its natural complexity but also aggravated by the rules changes and continuous improvements leading to new updates to the walking algorithm, this is one of the teams most energy and time-consuming problems.
  \subsection{Proposed Solution}
 
  Walking algorithms can be developed using various techniques, 
@@ -54,7 +54,7 @@
  Walking is very complex as there are a lot of variables involved in it, such as the ground contact, 
  maintaining balance and the complex gait movement. The two main aspects important to highlight are that the walking algorithm requires changes when both the robot or external factors change and that it requires manual work from the team to achieve this. 
 
- The best way to solve the first mentioned problem requires having a robot and environment agnostic approach. This is possible by using Reinforcement Learning as the principles of the movement maintain, therefore, it should be possible to develop an agnostic reward function.
+ The best way to solve the first mentioned problem requires having a robot and environment agnostic approach. This is possible by using reinforcement learning as the principles of the movement maintain, therefore, it should be possible to develop an agnostic reward function.
  From the moment a reinforcement learning solution is successfully implemented, the team should be able to use the same implementation to retrain the policy using the updated robot/environment modelled in the simulator.
  This also reduces the complexity of the problem as the input into the system is sensory data, and the output is a set of actions to execute on the joints.
 

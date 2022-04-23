@@ -122,7 +122,7 @@ The dilemma is that neither exploration nor exploitation can be pursued exclusiv
  
  The Bellman equation sums to the present reward the discount factor multiplied by the best next value output by the value function.
 
- The optimal value function $V^(s)$ maximises the expected reward. To achieve this, the Bellman equation is solved by iteratively updating the value function until $V^(s)$ is reached.
+ The optimal value function $V^{(s)}$ maximises the expected reward. To achieve this, the Bellman equation is solved by iteratively updating the value function until $V^{(s)}$ is reached.
 
  % Q values are calculated using the Bellman equation, the Bellman equation takes the present reward and sums to it the discount factor multiplied by the best next q value of the combination of the next action and state
 
@@ -151,7 +151,7 @@ Followed by the new advances in RL, there was a growing need for a common benchm
 
 The OpenAI team released Gym to enable this, by providing an accessible API and standardised environments. Gym is now the most widely used tool in RL research, it has a large community and documentation and a growing number of environments\cite{gym}.
 
-Gym was chosen as the framework to standardise the implementation which allows for an easier understanding and comparison, beyond this, the Gym also facilitates the implementation by using all the pre-built functions\cite{openai}.
+Gym was chosen as the framework to standardise the implementation which allows for an easier understanding and comparison, beyond this, the Gym also facilitates the implementation by using all the pre-built methods\cite{openai}.
 
 \section{Previous Implementations}
 To develop this project it was important first to study previous implementations, what problems were faced and the reasoning behind their decisions, 

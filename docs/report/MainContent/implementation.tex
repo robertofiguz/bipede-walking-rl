@@ -87,7 +87,7 @@ model = build_model(states, actions)
 model.build(states)
 \end{lstlisting}
     
-    The code displayed above is used to import the required packages for the model, proceeded by a function where the model is defined. Here, we can see that the model receives the inputs and it connect to a fully-connected (Dense) layer with 12 neurons and relu activation function,
+    The code displayed above is used to import the required packages for the model, proceeded by a function where the neural network is defined. Here, we can see that the model receives the inputs and it connect to a fully-connected (Dense) layer with 12 neurons and relu activation function,
     this layer is followed by another fully connected layer with 12 neurons and relu activation function.
     
     The next step in setting up the learning framework is to define the agent. To do this, Keras-rl needs to be imported.
@@ -120,13 +120,13 @@ In the code above, the agent, exploration policy and memory are imported from th
 
 The $build\_agent$ function is used to set the DQNAgent, the exploration policy is initiated and $\epsilon$ value is set to 0.3.
 The memory, replay buffer, is initiated using the SequentialMemory class from Keras-rl, the memory length is set to 50000 samples and the window length is set to the number of samples at each time, in this case 1.
-The agent is then compiled using the Adam optimizer, where the learning rate is set to the optimal value of 0.01, here the metric use is also set to the mean absolute error.
+The agent is then compiled using the Adam optimizer, where the learning rate is set to the optimal value of 0.01, here the metric used is also set to the mean absolute error.
 The DQNAgent is now initiated using the model, policy and memory previously defined, along with this, the number of actions is passed as a parameter, the number of warmup steps used to avoid oscillating parameters and the target model update is set to 1e-2, this indicates how the target model is updated based on the model being trained.
 
 The last line is used to train the agent, the environment is passed as a parameter and the number of steps is set to 50000.
 
 \subsection*{Manual Agent implementation}
-During the CartPole stage, another implementation was tested against Keras-rl, this was a manual implementation of the agent.
+During the CartPole stage, another implementation was tested against Keras-rl, a manual implementation of the agent.
 An agent can be split into multiple parts:
 \begin{itemize}
     \item Replay buffer
@@ -194,7 +194,7 @@ def act(self, state):
     return action
 \end{lstlisting}
 
-The action selection process implemented above is based on the epsilon greedy exploration strategy, to achieve a balance between exploration and exploitation an $\epsilon$. To select an action, a random number between [0,1] is generated and compared to $\epsilon$, if the random number is smaller than $\epsilon$ a random action is sampled from the environment, this is called exploration. If the random number is higher than $\epsilon$, the model is used to predict the q-value for each action, the highest q-value is selected using the NumPy function argmax, which returns the index of the higher q-value(and therefore the best-predicted action) instead of its value.
+The action selection process implemented above is based on the epsilon greedy exploration strategy, to achieve a balance between exploration and exploitation. To select an action, a random number between [0,1] is generated and compared to $\epsilon$, if the random number is smaller than $\epsilon$ a random action is sampled from the environment, this is called exploration. If the random number is higher than $\epsilon$, the model is used to predict the q-value for each action, the highest q-value is selected using the NumPy function argmax, which returns the index of the higher q-value(and therefore the best-predicted action) instead of its value.
 
 It is important to \textbf{update the target-q model} to improve the quality of the future predictions. To do this, the target model should be updated at a set number of iterations.
 
@@ -581,7 +581,7 @@ openai\_ros is an existing ROS package that implements the OpenAI Gym environmen
     \caption{openai\_ros package architecture\cite{ros-gym}}
 \end{figure}
 
-Although the package was developed to be used with ROS and Bold Hearts use ROS2 and due to some incompatible dependencies, it could not be used, although a ROS2 version based on the original was developed \cite{openairos_2}. 
+Although the package was developed to be used with ROS and Bold Hearts uses ROS2 and due to some incompatible dependencies, it could not be used, although a ROS2 version based on the original was developed \cite{openairos_2}. 
 When trying to compile the package on the Bold Hearts ADE it failed as it required Gym and the ADE does not have the package and does not have an internet connection as the docker container is in isolation mode, to fix this problem it was necessary to enable external connections to the docker container.
 
 \lstset{caption={Enabling external connections to the docker container}}
